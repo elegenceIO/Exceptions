@@ -1,6 +1,6 @@
 <?php
 
-namespace LazarusPhp\Exceptions\CoreFiles;
+namespace ElegenceIo\Exceptions\CoreFiles;
 
 use RuntimeException;
 

@@ -1,11 +1,10 @@
 <?php
-namespace LazarusPhp\Exceptions\Listeners;
-use LazarusPhp\Exceptions\Exceptions\FileNotFoundException;
-use LazarusPhp\Exceptions\Interfaces\ExceptionListenerInterface;
+namespace ElegenceIO\Exceptions\Listeners;
+use ElegenceIO\Exceptions\Exceptions\FileNotFoundException;
 use Throwable;
 use Psr\Log\LoggerInterface;
 
-class FileNotFoundListener implements ExceptionListenerInterface
+class FileNotFoundListener
 {
 
     public function __construct(private LoggerInterface $logger)
@@ -23,10 +22,12 @@ class FileNotFoundListener implements ExceptionListenerInterface
             return;
         }
 
-        http_response_code($e->getStatusCode());
+        http_response_code(404);
         echo json_encode([
             'error' => 'File not found',
             'message' => $e->getMessage(),
+            "line"=>__LINE__,
+            "FILE"=>__FILE__,
             'code' => $e->getCode(),
         ],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES);
     }

@@ -1,9 +1,9 @@
 <?php
-namespace LazarusPhp\Exceptions\Listeners;
+namespace ElegenceIO\Exceptions\Listeners;
 
-use LazarusPhp\Exceptions\Exceptions\DirectoryNotFoundException;
-use LazarusPhp\Logger\Level;
-use LazarusPhp\Exceptions\Interfaces\ExceptionListenerInterface;
+use ElegenceIO\Exceptions\Exceptions\DirectoryNotFoundException;
+use ElegenceIO\Logger\Level;
+use ElegenceIO\Contracts\Exceptions\ExceptionListenerInterface;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
@@ -17,7 +17,7 @@ class DirectoryNotFoundListener implements ExceptionListenerInterface
 
     public function support(Throwable $e):bool
     {
-        return $e  instanceof DirectoryNotFoundException;
+        return $e instanceof DirectoryNotFoundException;
     }
     
 

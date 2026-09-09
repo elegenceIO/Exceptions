@@ -1,5 +1,5 @@
 <?php
-namespace LazarusPhp\Exceptions\Listeners;
+namespace ElegenceIO\Exceptions\Listeners;
 use LazarusPhp\Exceptions\Interfaces\ExceptionListenerInterface;
 use LazarusPhp\Logger\Level;
 use Throwable;

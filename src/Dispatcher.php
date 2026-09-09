@@ -1,5 +1,5 @@
 <?php
-namespace LazarusPhp\Exceptions;
+namespace ElegenceIO\Exceptions;
 
 use LogicException;
 use Throwable;
